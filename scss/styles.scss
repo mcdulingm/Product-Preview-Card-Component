@@ -113,7 +113,7 @@ main {
             line-height: 1;
             color: $verydarkblue;
             @include for-tablet-portrait-up {
-                font-size: 2.4em;
+                font-size: 2.2em;
             }
         }
         p {
@@ -128,7 +128,7 @@ main {
             gap:20px;
             padding-bottom: 15px;
             @include for-tablet-portrait-up {
-                padding-bottom: 20px;
+                padding-bottom: 25px;
             }
             h2 {
                 font-size: $headerTwo;
