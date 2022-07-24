@@ -113,6 +113,12 @@ main {
   padding-bottom: 10px;
 }
 
+@media (min-width: 770px) {
+  .product__info h3 {
+    padding-bottom: 25px;
+  }
+}
+
 .product__info h1 {
   font-size: 2em;
   font-family: "Fraunces", serif;
@@ -120,6 +126,12 @@ main {
   display: block;
   line-height: 1;
   color: #1c232b;
+}
+
+@media (min-width: 770px) {
+  .product__info h1 {
+    font-size: 2.4em;
+  }
 }
 
 .product__info p {
@@ -138,6 +150,12 @@ main {
   padding-bottom: 15px;
 }
 
+@media (min-width: 770px) {
+  .product__info__pricing {
+    padding-bottom: 25px;
+  }
+}
+
 .product__info__pricing h2 {
   font-size: 2em;
   color: #3c8067;
@@ -151,6 +169,7 @@ main {
   font-size: 0.8em;
   display: block;
   line-height: 3;
+  padding-bottom: 0;
 }
 
 .product__info a {

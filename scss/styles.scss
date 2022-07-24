@@ -101,6 +101,9 @@ main {
             font-size: $headerThree;
             letter-spacing: 0.5em;
             padding-bottom: 10px;
+            @include for-tablet-portrait-up {
+                padding-bottom: 25px;
+            }
         }
         h1 {
             font-size: $headerOne;
@@ -109,6 +112,9 @@ main {
             display: block;
             line-height: 1;
             color: $verydarkblue;
+            @include for-tablet-portrait-up {
+                font-size: 2.4em;
+            }
         }
         p {
             color: $darkgrayishblue;
@@ -121,6 +127,9 @@ main {
             display: flex;
             gap:20px;
             padding-bottom: 15px;
+            @include for-tablet-portrait-up {
+                padding-bottom: 25px;
+            }
             h2 {
                 font-size: $headerTwo;
                 color: $darkcyan;
@@ -133,6 +142,7 @@ main {
                 font-size:$headerFour;
                 display: block;
                 line-height: 3;
+                padding-bottom: 0;
             }
         }
         a {
