@@ -65,7 +65,7 @@ main {
     overflow: hidden;
     @include for-tablet-portrait-up {
         max-width: 600px;
-        max-height: 450px;
+        height: 450px;
         min-height: auto;
         display: flex;
         flex-direction: row;
@@ -126,7 +126,7 @@ main {
                 color: $darkcyan;
                 font-family: $secondaryfont;
             }
-            h4 {
+            p {
                 text-decoration: line-through;
                 color: $darkgrayishblue;
                 font-weight:300;

@@ -53,7 +53,7 @@ main {
 @media (min-width: 770px) {
   .product {
     max-width: 600px;
-    max-height: 450px;
+    height: 450px;
     min-height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -144,7 +144,7 @@ main {
   font-family: "Fraunces", serif;
 }
 
-.product__info__pricing h4 {
+.product__info__pricing p {
   text-decoration: line-through;
   color: #6c7289;
   font-weight: 300;
