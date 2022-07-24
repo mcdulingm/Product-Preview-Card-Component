@@ -1,0 +1,173 @@
+//Primary Colors
+
+$darkcyan: hsl(158, 36%, 37%);
+$verydarkcyan: hsl(158, 36%, 17%);
+$cream: hsl(30, 38%, 92%);
+
+//Neutral
+
+$verydarkblue: hsl(212, 21%, 14%);
+$darkgrayishblue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+//Fonts
+
+$paragraph: 14px;
+$mainfont: 'Montserrat', sans-serif;
+$secondaryfont: 'Fraunces', serif;
+$headerOne:2em;
+$headerTwo:2em;
+$headerThree:0.7em;
+$headerFour:0.8em;
+
+
+@mixin for-tablet-portrait-up {
+    @media (min-width: 770px) { @content; }
+  }
+
+
+* {
+    margin: 0;
+	padding: 0;
+	border: 0;
+    outline:none;
+	font-size: 100%;
+	vertical-align: baseline;
+    box-sizing: border-box;
+    font-family: $mainfont;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+main {
+    background: $cream;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product {
+    width: 100%;
+    height: 100%;
+    max-width: 343px;
+    max-height: 611px;
+    overflow: hidden;
+    border-radius: 0.5em;
+    background-color: $white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    @include for-tablet-portrait-up {
+        max-width: 600px;
+        max-height: 450px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__image {
+        height: 240px;
+        background-image: url(/assets/image-product-mobile.jpg);
+        background-size: cover;
+        @include for-tablet-portrait-up {
+            width: 300px;
+            height: 100%;
+            background-image: url(/assets/image-product-desktop.jpg);
+        }
+    }
+    &__info {
+        padding: 27px 23px 24px 25px;
+        @include for-tablet-portrait-up {
+            width: 300px;
+            height: 100%;
+            padding: 35px 32px 32px 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            color: $darkgrayishblue;
+            font-weight: 300;
+            font-size: $headerThree;
+            letter-spacing: 0.5em;
+            padding-bottom: 10px;
+        }
+        h1 {
+            font-size: $headerOne;
+            font-family: $secondaryfont;
+            padding-bottom: 18px;
+            display: block;
+            line-height: 1;
+            color: $verydarkblue;
+        }
+        p {
+            color: $darkgrayishblue;
+            font-weight: 300;
+            font-size: $paragraph;
+            line-height: 1.6;
+            padding-bottom: 24px;
+        }
+        &__pricing {
+            display: flex;
+            gap:20px;
+            padding-bottom: 15px;
+            h2 {
+                font-size: $headerTwo;
+                color: $darkcyan;
+                font-family: $secondaryfont;
+            }
+            h4 {
+                text-decoration: line-through;
+                color: $darkgrayishblue;
+                font-weight:300;
+                font-size:$headerFour;
+                display: block;
+                line-height: 3;
+            }
+        }
+        a {
+            background-color: $darkcyan;
+            border-radius: 0.5em;
+            font-size: 0.9em;
+            font-weight: 500;
+            width: 100%;
+            height: 48px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            gap:10px;
+
+            &:hover, &:focus {
+                background-color:$verydarkcyan;
+            }
+
+        }
+    }
+}
+
+.attribution {
+    margin-top: 2em;
+    font-size: $headerFour;
+    @include for-tablet-portrait-up {
+        position: absolute;
+        bottom: 2em;
+    }
+    a {
+        color: $darkcyan;
+        
+        &:hover, &:focus {
+            text-decoration: underline;
+            color: $verydarkcyan;
+        }
+    }
+}
